@@ -1,7 +1,17 @@
+import {Routes, Route } from "react-router-dom"
+import Home from "./components/Home"
+import About from "./components/About"
+import Nav from "./components/Nav"
+
 function App() {
-    return <div>
-        <h1>Garoo App</h1>
-        <p>Some text here</p>
-        </div>
+    return <>
+        <Nav />
+        <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="about" element={<About />}/>
+        <Route path="*" element={<Home />}/>
+        </Routes>
+
+        </>
 }
 export default App
